@@ -1,11 +1,12 @@
 const express = require("express");
+require('dotenv').config()
 const mongoose = require("mongoose");
 var bodyParser = require("body-parser");
 
-const username = "Paimo";
-const password = "R!DR63UQ!V.J6rx";
-const cluser = "cluster0.xrldvl4";
-const dbName = "book";
+const username = process.env.USERNAME
+const password = process.env.PASSWORD
+const cluser = process.env.CLUSTER
+const dbName = process.env.DBNAME
 const adminRoutes = require("./routes/admin-routes");
 const authRoutes = require("./routes/auth-routes");
 const shopRoutes = require("./routes/shop-routes");
